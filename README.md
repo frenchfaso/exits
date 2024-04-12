@@ -1,55 +1,15 @@
-# xeus-python + JupyterLite demo
+![Exit Icon](./icons/exit_128.png)
 
-[![lite-badge](https://jupyterlite.rtfd.io/en/latest/_static/badge.svg)](https://jupyterlite.github.io/xeus-python-demo/notebooks/?path=demo.ipynb)
+# Exit Strategy Explorer
+## Interactively compare linear, logarithmic, and exponential scaling-out strategies.
 
-xeus-python + JupyterLite deployed as a static site to GitHub Pages, for demo purposes.
+The **Exit Strategy Explorer** provides a simple tool for investors to compare different exit strategies, namely linear, logarithmic, and exponential scaling-out strategies. Each strategy offers a unique approach to selling assets, and understanding the distinctions can significantly impact investment outcomes.
 
-## ✨ Try it in your browser ✨
+**Linear scaling-out strategy** involves selling a fixed quantity of an asset over a specified time period or price range. This method is straightforward and predictable, making it easy to implement and understand. Its main strength lies in its simplicity and consistent execution. However, it may not optimize returns during periods of high volatility, as it does not account for changes in market dynamics.
 
-https://jupyterlite.github.io/xeus-python-demo/notebooks/?path=demo.ipynb
+**Logarithmic scaling-out strategy** is designed to sell progressively smaller quantities of an asset as the price increases. This approach aims to capitalize on higher prices early on, securing profits while still retaining a portion of the asset for potential further increases. The strength of this strategy lies in its ability to balance risk and reward by taking advantage of rising markets. However, its complexity can be a drawback, as it requires more sophisticated decision-making and market analysis.
 
-## ≠ How does it compare to the Pyodide kernel?
+**Exponential scaling-out strategy** involves increasing the quantity of asset sales as prices rise. This aggressive strategy maximizes potential profits if the price continues to increase but can also lead to significant losses if the market reverses. The exponential method is best suited for markets experiencing rapid growth. The main strength of this strategy is its capacity to amplify profits during strong uptrends, but this comes at the cost of increased risk and potential for higher volatility in returns.
 
-#### Pyodide kernel:
-
-- Is based on [Pyodide](https://github.com/pyodide/pyodide)
-- Uses [IPython](https://github.com/ipython/ipython) for the code execution (access to IPython magics, support for the inline Matplotlib backend, *etc*)
-- Provides a way to dynamically install packages with ``piplite`` (**e.g.** ``await piplite.install("ipywidgets")``)
-- **Does not support** sleeping with ``from time import sleep``
-- **Does not support** pre-installing packages
-
-#### jupyterlite-xeus-python:
-
-- Is based on [xeus-python](https://github.com/jupyter-xeus/xeus-python)
-- Uses [IPython](https://github.com/ipython/ipython) for the code execution (access to IPython magics, support for the inline Matplotlib backend, *etc*)
-- **Does not provide** a way to dynamically install packages (yet. We are working on building a ``mamba`` package manager for WASM)
-- **Supports** sleeping with ``from time import sleep``
-- **Supports** pre-installing packages from ``emscripten-forge`` and ``conda-forge``, by providing an ``environment.yml`` file defining the runtime environment
-
-## 💡 How to make your own deployment
-
-![Deploy your own](deploy.gif)
-
-Then your site will be published under https://{USERNAME}.github.io/{DEMO_REPO_NAME}
-
-## 📦 How to install extra packages
-
-You can pre-install extra packages for xeus-python by adding them to the ``environment.yml`` file.
-
-For example, if you want to create a JupyterLite deployment with NumPy and Matplotlib pre-installed, you would need to edit the ``environment.yml`` file as following:
-
-```yml
-name: xeus-python-kernel
-channels:
-  - https://repo.mamba.pm/emscripten-forge
-  - conda-forge
-dependencies:
-  - xeus-python
-  - numpy
-  - matplotlib
-```
-
-Only ``no-arch`` packages from ``conda-forge`` and packages from ``emscripten-forge`` can be installed.
-- **How do I know if a package is ``no-arch`` on ``conda-forge``?** ``no-arch`` means that the package is OS-independent, usually pure-python packages are ``no-arch``. To check if your package is ``no-arch`` on ``conda-forge``, check if the "Platform" entry is "no-arch" in the https://beta.mamba.pm/channels/conda-forge?tab=packages page. If your package is not ``no-arch`` but is a pure Python package, then you should probably update the feedstock to turn your package into a ``no-arch`` one.
-![](noarch.png)
-- **How do I know if my package is on ``emscripten-forge``?** You can see the list of packages pubished on ``emscripten-forge`` [here](https://beta.mamba.pm/channels/emscripten-forge?tab=packages). In case your package is missing, or it's not up-to-date, feel free to open an issue or a PR on https://github.com/emscripten-forge/recipes.
+Each of these strategies offers distinct advantages and challenges, making it crucial for users to understand their underlying mechanisms and suitability for different market conditions.  
+The **Exit Strategy Explorer** allows users to interactively simulate these strategies, providing valuable insights into their potential impacts on investment portfolios.
