@@ -1,4 +1,4 @@
-![Exit Icon](./content/icons/exit_128.png)
+![Exits Icon](./content/icons/exit_128.png)
 
 # Exit Strategy Explorer
 ## Interactively compare linear, logarithmic, and exponential scaling-out strategies.
@@ -12,4 +12,6 @@ The **Exit Strategy Explorer** provides a simple tool for investors to compare d
 **Exponential scaling-out strategy** involves increasing the quantity of asset sales as prices rise. This aggressive strategy maximizes potential profits if the price continues to increase but can also lead to significant losses if the market reverses. The exponential method is best suited for markets experiencing rapid growth. The main strength of this strategy is its capacity to amplify profits during strong uptrends, but this comes at the cost of increased risk and potential for higher volatility in returns.
 
 Each of these strategies offers distinct advantages and challenges, making it crucial for users to understand their underlying mechanisms and suitability for different market conditions.  
-The **Exit Strategy Explorer** allows users to interactively simulate these strategies, providing valuable insights into their potential impacts on investment portfolios.
+The **Exit Strategy Explorer** allows users to interactively simulate these strategies, providing valuable insights into their potential impacts on investment portfolios.  
+
+![Exits Screenshot](./screenshot.png)
