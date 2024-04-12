@@ -1,4 +1,4 @@
-![Exit Icon](./icons/exit_128.png)
+![Exit Icon](./content/icons/exit_128.png)
 
 # Exit Strategy Explorer
 ## Interactively compare linear, logarithmic, and exponential scaling-out strategies.
